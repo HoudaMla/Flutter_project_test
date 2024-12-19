@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pfe_test_app/screens/cartScreen.dart';
 import 'product_detail.dart';
 import '../models/product.dart';
-
+import 'cartScreen.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,11 @@ class HomeScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                  },
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => CartScreen()),
+                );
+              },     
                   child: Text("See all"),
                 ),
               ],

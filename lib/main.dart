@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pfe_test_app/screens/cartScreen.dart';
 import 'package:provider/provider.dart';  
 import 'onboarding_screen.dart';
 import 'login_screen.dart'; 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => OnboardingScreen(), 
         '/login': (context) => LoginScreen(), 
+        '/cart':(context) => CartScreen(),
         '/main': (context) => MainNavigation(), 
       },
       builder: (context, child) {
