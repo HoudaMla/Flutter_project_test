@@ -186,7 +186,6 @@ class ProductCard extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // Handle add to cart functionality
                         },
                         child: Container(
                           padding: EdgeInsets.all(8),

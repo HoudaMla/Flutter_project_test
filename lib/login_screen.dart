@@ -39,7 +39,7 @@ class LoginForm extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {}, // Add Forgot Password functionality
+                onPressed: () {}, 
                 child: Text("Forgot Password?"),
               ),
             ),
@@ -53,7 +53,6 @@ class LoginForm extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 100),
               ),
                 onPressed: () {
-                // Navigate to HomeScreen on successful login
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -66,7 +65,7 @@ class LoginForm extends StatelessWidget {
               children: [
                 Text("Don’t have an account? "),
                 GestureDetector(
-                  onTap: () {}, // Navigate to the signup screen
+                  onTap: () {}, 
                   child: Text(
                     "Signup",
                     style: TextStyle(

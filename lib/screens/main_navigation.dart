@@ -8,12 +8,11 @@ class MainNavigation extends StatefulWidget {
 }
 
 class _MainNavigationState extends State<MainNavigation> {
-  int _currentIndex = 0; 
+  int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    HomeScreen(),
-    CartScreen(),
-   
+    HomeScreen(),  
+    CartScreen(),  
   ];
 
   @override
@@ -21,16 +20,17 @@ class _MainNavigationState extends State<MainNavigation> {
     return Scaffold(
       body: _screens[_currentIndex], 
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
+        currentIndex: _currentIndex, 
         onTap: (index) {
           setState(() {
-            _currentIndex = index; 
+            _currentIndex = index;
+            print("Selected index: $_currentIndex"); 
           });
         },
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.store), label: "Shop"),
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: "Explore"),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Cart"),

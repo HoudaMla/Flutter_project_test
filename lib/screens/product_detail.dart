@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';  
-import '../providers/basket_provider.dart'; // Import BasketProvider
+import '../providers/basket_provider.dart'; 
 
 class ProductDetail extends StatefulWidget {
   final String productName;
@@ -25,7 +25,6 @@ class _ProductDetailState extends State<ProductDetail> {
 
   @override
   Widget build(BuildContext context) {
-    // Access the BasketProvider
     final basketProvider = Provider.of<BasketProvider>(context);
 
     return Scaffold(
@@ -41,7 +40,7 @@ class _ProductDetailState extends State<ProductDetail> {
         actions: [
           IconButton(
             icon: const Icon(Icons.favorite_border, color: Colors.black),
-            onPressed: () {} // Add functionality for favorites if needed
+            onPressed: () {} 
           ),
         ],
       ),
@@ -67,7 +66,7 @@ class _ProductDetailState extends State<ProductDetail> {
             ),
             const SizedBox(height: 8),
             const Text(
-              "1kg", // You can make this dynamic based on product unit if needed
+              "1kg",
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,
@@ -167,7 +166,6 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                 ),
                 onPressed: () {
-                  // Add to basket functionality
                   basketProvider.addProductToBasket(
                     widget.productName,
                     widget.productImage,

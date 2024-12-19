@@ -13,7 +13,6 @@ class OnboardingScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          // Overlay Content
           Positioned.fill(
             child: Container(
               color: Colors.black.withOpacity(0.3), 
@@ -30,7 +29,6 @@ class OnboardingScreen extends StatelessWidget {
                 width: 60,
               ),
               SizedBox(height: 16),
-              // Welcome Text
               Text(
                 'Welcome\n to our store',
                 textAlign: TextAlign.center,
@@ -41,7 +39,6 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 8),
-              // Subtitle
               Text(
                 'Get your groceries in as fast as one hour',
                 textAlign: TextAlign.center,
@@ -51,7 +48,6 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 32),
-              // Get Started Button
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
                 child: ElevatedButton(
@@ -63,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
                           },
 
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.green, // Use 'primary' instead of 'backgroundColor'
+                            primary: Colors.green, 
                             minimumSize: Size(double.infinity, 50),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -80,7 +76,7 @@ class OnboardingScreen extends StatelessWidget {
                         ),
 
               ),
-              Spacer(), // Add space below
+              Spacer(),
             ],
           ),
         ],
